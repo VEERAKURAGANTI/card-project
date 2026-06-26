@@ -165,9 +165,7 @@ footer {
 
 /* || MEDIUM */
 @media screen and (min-width: 768px) {
-  /* nav {
-    display: none;
-  } */
+ 
 
   .card {
     width: min(100%, 325px);
@@ -207,9 +205,7 @@ footer {
     font-size: 1.5rem;
   }
 
-  /* nav {
-    display: none;
-  } */
+ 
 
   main {
     flex-flow: row nowrap;
