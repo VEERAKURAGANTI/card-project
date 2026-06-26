@@ -4,20 +4,155 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
     font-size: 2rem;
     min-height: 100vh;
-    color: aliceblue;
-    background: #000000;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #434343, #000000);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #434343, #000000);
+    background-color: #AAB0BA;
     display: flex;
     flex-direction: column;
 }
 
-header {
 
+header,
+footer {
+    position: sticky;
+    background-color: #1C2839;
+    color: whitesmoke;
+    text-align: center;
+}
+
+header {
+    top: 0px;
+}
+
+nav {
+    background-color: whitesmoke;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a,
+nav a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover,
+nav a:focus {
+    color: hsla(0, 0%, 20%, 0.6);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.card {
+    scroll-margin-top: 120px;
+    width: min(100%, 350px);
+
+    background-color: #cbd5e1;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card figure {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.card img {
+    border: 3px double gray;
+    border-radius: 50%;
+}
+
+.card figcaption {
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* || SMALL */
+@media screen and (min-width: 576px) {
+    body {
+        background-color: green;
+        background-image: radial-gradient(whitesmoke, green);
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+/* || MEDIUM */
+@media screen and (min-width: 768px) {
+    body {
+        background-color: gold;
+        background-image: radial-gradient(whitesmoke, gold);
+    }
+}
+
+/* || LARGE */
+@media screen and (min-width: 992px) {
+    body {
+        background-color: firebrick;
+        background-image: radial-gradient(whitesmoke, firebrick);
+    }
+}
+
+/* || XL  */
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: rebeccapurple;
+        background-image: radial-gradient(whitesmoke, rebeccapurple);
+    }
+}
+
+/* || MOBILE DEVICE LANDSCAPE  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    body {
+        background-color: dodgerblue;
+        background-image: radial-gradient(whitesmoke, dodgerblue);
+    }
+
+    h1,
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        display: none;
+    }
+}
+footer {
+  bottom: 0;
 }
